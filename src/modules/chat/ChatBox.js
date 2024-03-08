@@ -2,15 +2,11 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ChatMsg, UserSlot } from './reducer';
 import { useRouter } from 'next/router';
 
-type Props = {
-  userSlot: UserSlot;
-  messages: ChatMsg[];
-  onSubmit: (msg: ChatMsg) => void;
-};
 
-export const ChatBox: React.FC<Props> = ({ userSlot, messages, onSubmit }) => {
+
+export const ChatBox = ({ userSlot, messages, onSubmit }) => {
   const router = useRouter();
-  const [msg, setMsg] = useState<string>();
+  const [msg, setMsg] = useState('');
 
   const submit = useCallback(() => {
     if (msg?.length && msg.length > 0) {

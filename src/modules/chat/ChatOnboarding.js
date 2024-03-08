@@ -1,9 +1,4 @@
-type Props = {
-  slots: string[];
-  onSubmit: (slot: string) => void;
-};
-
-export const ChatOnboarding: React.FC<Props> = ({ slots, onSubmit }) => {
+export const ChatOnboarding = ({ slots, onSubmit }) => {
   return (
     <div
       className="fixed nohidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex text-slate-900"

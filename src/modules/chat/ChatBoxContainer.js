@@ -2,13 +2,7 @@ import { Dispatch, useEffect } from 'react';
 import { ChatBox } from './ChatBox';
 import { ChatActions, ChatState, UserSlot } from './reducer';
 
-type Props = {
-  userSlot: UserSlot;
-  state: ChatState;
-  dispatch: Dispatch<ChatActions>;
-};
-
-export const ChatBoxContainer: React.FC<Props> = ({
+export const ChatBoxContainer = ({
   dispatch,
   state,
   userSlot,
